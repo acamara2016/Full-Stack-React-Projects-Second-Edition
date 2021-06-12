@@ -9,11 +9,12 @@ import Grid from '@material-ui/core/Grid'
 import auth from './../auth/auth-helper'
 import FindPeople from './../user/FindPeople'
 import Newsfeed from './../post/Newsfeed'
+import Dashboard from './Dashboard'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    margin: 30,
+    flexGrow: 1.5,
+    margin: 0,
   },
   card: {
     maxWidth: 600,
@@ -59,7 +60,7 @@ export default function Home({history}){
           <Grid container spacing={8}>
             <Grid item xs={12}>
               <Card className={classes.card}>
-                <Typography variant="h6" className={classes.title}>
+                <Typography style={{position: 'fixed'}} variant="h6" className={classes.title}>
                   Home Page
                 </Typography>
                 <CardMedia className={classes.media} image={unicornbikeImg} title="Unicorn Bicycle"/>
@@ -74,14 +75,18 @@ export default function Home({history}){
           </Grid>
         }
         {defaultPage &&
-          <Grid container spacing={8}>
-            <Grid item xs={8} sm={7}>
-              <Newsfeed/>
-            </Grid>
-            <Grid item xs={6} sm={5}>
-              <FindPeople/>
-            </Grid>
-          </Grid>
+          <Dashboard/>
+          // <Grid container spacing={8}>
+          //   <Grid item xs={3} sm={3}>
+          //     <Newsfeed/>
+          //   </Grid>
+          //   <Grid item xs={8} sm={7}>
+          //     <Newsfeed/>
+          //   </Grid>
+          //   <Grid item xs={6} sm={5}>
+          //     <FindPeople/>
+          //   </Grid>
+          // </Grid>
         }
       </div>
     )

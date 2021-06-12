@@ -15,14 +15,11 @@ const isActive = (history, path) => {
     return {color: '#ffffff'}
 }
 const Menu = withRouter(({history}) => (
-  <AppBar position="static">
+  <AppBar position="fixed">
     <Toolbar>
-      <Typography variant="h6" color="inherit">
-        MERN Social
-      </Typography>
       <Link to="/">
         <IconButton aria-label="Home" style={isActive(history, "/")}>
-          <HomeIcon/>
+          <i class="fab fas-2x fa-dyalog">ialog</i>
         </IconButton>
       </Link>
       {

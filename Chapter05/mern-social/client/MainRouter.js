@@ -8,6 +8,7 @@ import EditProfile from './user/EditProfile'
 import Profile from './user/Profile'
 import PrivateRoute from './auth/PrivateRoute'
 import Menu from './core/Menu'
+import SimpleBottomNavigation from './core/BottomNavigation'
 
 const MainRouter = () => {
     return (<div>

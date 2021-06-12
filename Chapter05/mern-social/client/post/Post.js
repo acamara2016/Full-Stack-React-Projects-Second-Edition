@@ -131,13 +131,13 @@ export default function Post (props){
         <CardActions>
           { values.like
             ? <IconButton onClick={clickLike} className={classes.button} aria-label="Like" color="secondary">
-                <FavoriteIcon />
+                <i class="fas fa-thumbs-up"></i>
               </IconButton>
             : <IconButton onClick={clickLike} className={classes.button} aria-label="Unlike" color="secondary">
-                <FavoriteBorderIcon />
+                <i class="far fa-thumbs-up"></i>
               </IconButton> } <span>{values.likes}</span>
               <IconButton className={classes.button} aria-label="Comment" color="secondary">
-                <CommentIcon/>
+                <i class="fas fa-feather"></i>
               </IconButton> <span>{values.comments.length}</span>
         </CardActions>
         <Divider/>

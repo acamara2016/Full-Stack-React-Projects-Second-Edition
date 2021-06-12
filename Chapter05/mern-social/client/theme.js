@@ -3,6 +3,7 @@ import { teal, orange } from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
     palette: {
+      //light: '#52c7b8',
       primary: {
       light: '#52c7b8',
       main: '#009688',

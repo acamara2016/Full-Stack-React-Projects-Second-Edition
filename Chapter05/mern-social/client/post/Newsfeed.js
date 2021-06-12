@@ -10,9 +10,9 @@ import NewPost from './NewPost'
 
 const useStyles = makeStyles(theme => ({
   card: {
-    margin: 'auto',
+    margin: '0',
     paddingTop: 0,
-    paddingBottom: theme.spacing(3)
+    paddingBottom: theme.spacing(0)
   },
   title: {
     padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
@@ -63,10 +63,6 @@ export default function Newsfeed () {
 
     return (
       <Card className={classes.card}>
-        <Typography type="title" className={classes.title}>
-          Newsfeed
-        </Typography>
-        <Divider/>
         <NewPost addUpdate={addPost}/>
         <Divider/>
         <PostList removeUpdate={removePost} posts={posts}/>
